@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres | StockManager</title>
+    <link rel="stylesheet" href="paramètres.css">
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard">
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn" aria-label="Ouvrir/fermer le menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+
+        <aside class="sidebar">
+            <div class="logout-1">
+                <h2 class="logo">
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i> Dashboard
+                </h2>
+                <hr>
+                <ul class="menu">
+                    <li><a href="dashboard.html"><i class="fa-solid fa-gauge" aria-hidden="true"></i><span>Tableau de
+                                bord</span></a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-line"
+                                aria-hidden="true"></i><span>Analytics</span></a></li>
+                    <li><a href="commandes.html"><i class="fa-solid fa-cart-shopping"
+                                aria-hidden="true"></i><span>Commandes</span></a>
+                    </li>
+                    <li><a href="parametres.html" class="active"><i class="fa-solid fa-gears"
+                                aria-hidden="true"></i><span>Paramètres</span></a></li>
+                    <li><a href="rapports.html"><i class="fa-solid fa-chart-bar"
+                                aria-hidden="true"></i><span>Rapports</span></a></li>
+                    <li><a href="notifications.html"><i class="fa-solid fa-bell"
+                                aria-hidden="true"></i><span>Notifications</span></a></li>
+                </ul>
+            </div>
+
+            <div class="logout">
+                <div class="ad">
+                    <div class="user-card">
+                        <div class="user-image">
+                            <i class="fa-solid fa-circle-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="user-info">
+                            <a href="#">Administrateur</a>
+                            <span class="user-infoi">Gestionnaire</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profil">
+                    <a href="#abdel"><i class="fa-solid fa-circle-user" aria-hidden="true"></i> Mon Profil</a>
+                </div>
+
+                <div class="logout-btn">
+                    <a href="accueil.html"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+                        Déconnexion</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <span class="titre">Gestion de Stock - Produits Électroniques</span>
+                <div class="user">
+                    <div class="notification">
+                        <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-info-2">
+                        <i class="fa-solid fa-circle-user" aria-hidden="true"></i> <span>Administrateur</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content">
+                <section class="page-header">
+                    <h1> <i class="fa-solid fa-gears" aria-hidden="true"></i> Paramètres & Configuration</h1>
+                    <p class="subtitle">Configuration du système et préférences utilisateur</p>
+                </section>
+
+                <div class="container">
+
+                    <form id="settings-form" class="settings-grid">
+
+
+                        <h2 class="section-title"> <i class="fa-solid fa-sliders" aria-hidden="true"></i> Paramètres
+                            Généraux</h2>
+
+                        <div class="section-1">
+                            <div class="mag">
+                                <div class="setting-item">
+                                    <div>
+                                        <div class="setting-label">Notifications</div>
+                                        <p class="setting-description">Recevoir des notifications par email</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notifications" name="notifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div>
+                                        <div class="setting-label">Mode Sombre</div>
+                                        <p class="setting-description">Activer le thème sombre</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="dark-mode" name="dark-mode">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div>
+                                        <div class="setting-label">Auto-sauvegarde</div>
+                                        <p class="setting-description">Sauvegarder automatiquement les modifications</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="auto-save" name="auto-save" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting lang">
+                                <div class="el">
+                                    <div class="setting-label">Langue</div>
+                                    <p class="setting-description">Langue de l'interface</p>
+                                </div>
+                                <div class="setting-value">
+                                    <select class="lang-select" id="language" name="language">
+                                        <option value="fr" selected>Français</option>
+                                        <option value="en">Anglais</option>
+                                        <option value="ar">Arabe</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="section-title"> <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                            Gestion de Stock</h2>
+
+                        <div class="section">
+                            <div class="setting-item">
+                                <div>
+                                    <label for="alert-threshold" class="setting-label">Seuil d'alerte</label>
+                                    <p class="setting-description">Nombre minimum d'articles avant alerte</p>
+                                </div>
+                                <div class="setting-value">
+                                    <input type="number" id="alert-threshold" name="alert-threshold" placeholder="5"
+                                        value="5" min="1" max="100">
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <div class="setting-label">Auto-commande</div>
+                                    <p class="setting-description">Commander automatiquement en cas de stock faible
+                                    </p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="auto-order" name="auto-order" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <label for="currency" class="setting-label">Devise</label>
+                                    <p class="setting-description">Devise d'affichage</p>
+                                </div>
+                                <div class="setting-value">
+                                    <input type="text" id="currency" name="currency" placeholder="Euro (€)"
+                                        value="Euro (€)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="section-title"> <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            Sécurité</h2>
+                        <div class="section">
+
+                            <div class="setting-item">
+                                <div>
+                                    <div class="setting-label">Authentification à deux facteurs</div>
+                                    <p class="setting-description">Activer la 2FA pour plus de sécurité</p>
+                                </div>
+                                <div class="setting-value">
+                                    <button type="button" class="btn btn-primary" id="enable-2fa">Activer</button>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <div class="setting-label">Changer le mot de passe</div>
+                                    <p class="setting-description">Modifier votre mot de passe actuel</p>
+                                </div>
+                                <div class="setting-value">
+                                    <button type="button" class="btn btn-second" id="change-password">Changer</button>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <div class="setting-label">Sessions actives</div>
+                                    <p class="setting-description">Gérer les sessions connectées</p>
+                                </div>
+                                <div class="setting-value">
+                                    <button type="button" class="btn btn-second" id="view-sessions">Voir
+                                        (3)</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="section-title"> <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                            Système</h2>
+                        <div class="section brode">
+                            <div class="setting-it">
+                                <div class="setting-value">
+                                    <button type="submit" class="btn btn-primary" id="save-config">
+                                        <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i>
+                                        Sauvegarder la configuration
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="setting-it">
+                                <div class="setting-value">
+                                    <button type="button" class="btn btn-second" id="export-settings">
+                                        <i class="fa-solid fa-download" aria-hidden="true"></i>
+                                        Exporter les paramètres
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="setting-it">
+                                <div class="setting-value">
+                                    <button type="button" class="btn btn-secondary" id="reset-defaults">
+                                        <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                                        Réinitialiser par défaut
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="setting-it">
+                                <div class="setting-value">
+                                    <button type="button" class="btn btn-danger" id="delete-all-data">
+                                        <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                                        Effacer toutes les données
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <div id="abdel">
+                <input type="checkbox" id="toggle-profile">
+
+                <div class="profile-container">
+
+                    <div class="profile-header">
+                        <p><i class="fa-solid fa-user-circle icon-header"></i> Mon Profil</p>
+                        <a href="parametres.html" class="mark"><i class="fa-solid fa-xmark"></i></a>
+                    </div>
+
+
+                    <div class="profile-picture">
+                        <i class="fa-solid fa-user-circle icon-header"></i>
+                        <p>Changer la photo</p>
+                    </div>
+
+                    <div class="profile-content">
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label> Nom :</label>
+                                <input type="text" placeholder="Entrez votre nom" value="Administrateur">
+                            </div>
+                            <div class="field">
+                                <label> Prénom :</label>
+                                <input type="text" placeholder="Entrez votre prénom" value="Jean">
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label> Email :</label>
+                                <input type="email" placeholder="Ex : admin@dashboard.com" value="admin@dashboard.com">
+                            </div>
+                            <div class="field">
+                                <label> Téléphone :</label>
+                                <input type="tel" placeholder="Ex : +227 80 50 70 70" value="+33 6 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label> Rôle :</label>
+                            <input type="text" placeholder="Votre fonction dans le système" value="Gestionnaire">
+                        </div>
+
+                        <div class="field-group">
+                            <label> Dernière connexion :</label>
+                            <input type="text" value="15 Janvier 2024 à 14:30" disabled>
+                        </div>
+
+                        <div class="buttons">
+                            <button class="btn btn-close"> Fermer</button>
+                            <button class="btn btn-save"> Sauvegarder</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

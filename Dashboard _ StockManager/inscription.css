@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0a2e52, #113f67);
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    max-width: 95%;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-section {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-section {
+    flex: 1;
+    background-color: #0a2e52;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 1.8rem;
+}
+
+
+h3 {
+    font-size: 1.8rem;
+    padding-bottom: 18px;
+}
+
+.mgid {
+    padding: 20px;
+    margin: 15px;
+    line-height: 1.4;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.ms {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0a2e52;
+}
+
+.login-section h2 {
+    font-size: 1.6rem;
+    color: #0a2e52;
+    margin-bottom: 1.5rem;
+}
+
+.login-section input[type="text"],
+.login-section input[type="password"],
+.login-section input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+}
+
+.login-section input[type="text"]:focus,
+.login-section input[type="password"]:focus,
+.login-section input[type="email"]:focus {
+    border-color: #0c0f14;
+    outline: none;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #012b5b;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    ;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1f0f9c;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .login-section {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ms {
+        font-size: 24px;
+    }
+
+    button.bnt {
+        width: 100%;
+    }
+}

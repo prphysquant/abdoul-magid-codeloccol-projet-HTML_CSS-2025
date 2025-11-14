@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | StockManager</title>
+    <link rel="stylesheet" href="notifications.css">
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <aside class="sidebar">
+            <div class="logout-1">
+                <h1 class="logo">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </h1>
+                <hr>
+                <ul class="menu">
+                    <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i><span>Tableau de bord</span></a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+                    <li><a href="commandes.html"><i class="fa-solid fa-cart-shopping"></i><span>Commandes</span></a>
+                    </li>
+                    <li><a href="parametres.html"><i class="fa-solid fa-gears"></i><span>Paramètres</span></a></li>
+                    <li><a href="rapports.html"><i class="fa-solid fa-chart-bar"></i><span>Rapports</span></a></li>
+                    <li><a href="notifications.html" class="active"><i
+                                class="fa-solid fa-bell"></i><span>Notifications</span></a></li>
+                </ul>
+            </div>
+
+            <div class="logout">
+
+                <div class="user-card">
+                    <div class="user-image">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <a href="#">Administrateur</a>
+                        <span class="user-infoi">Gestionnaire</span>
+                    </div>
+                </div>
+
+
+                <div class="profil">
+                    <a href="#abdel"><i class="fa-solid fa-circle-user"></i> Mon Profil</a>
+                </div>
+
+                <div class="logout-btn">
+                    <a href="accueil.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Déconnexion</a>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <span class="titre">Gestion de Stock - Produits Électroniques</span>
+                <div class="user">
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-info">
+                        <i class="fa-solid fa-circle-user"></i> Administrateur
+                    </div>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="numbers">
+                    <h1> <i class="fa-solid fa-bell"></i> Notifications & Alertes</h1>
+                    <h2>Centre de Notification et gestion des alertes système</h2>
+                </div>
+
+                <div class="cards">
+                    <div class="car">
+                        <div class="stat-card unread">
+                            <div class="coull bleu"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Non lues</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card urgent">
+                            <div class="coull rouge"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div>
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Urgentes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car">
+                        <div class="stat-card today">
+                            <div class="coull vert"><i class="fa-solid fa-calendar-day"></i></div>
+                            <div>
+                                <div class="stat-number">23</div>
+                                <div class="stat-label">Aujourd'hui</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card total">
+                            <div class="coull black"><i class="fa-solid fa-bars"></i></div>
+                            <div>
+                                <div class="stat-number">156</div>
+                                <div class="stat-label">Total</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="report-form">
+                <div class="form-group">
+                    <label for="report-type">Type de rapport :</label>
+                    <select id="report-type">
+                        <option>Rapport des ventes</option>
+                        <option>Rapport de stock</option>
+                        <option>Rapport financier</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="period">Période :</label>
+                    <select id="period">
+                        <option>Ce mois</option>
+                        <option>Ce trimestre</option>
+                        <option>Cette année</option>
+                        <option>Période personnalisée</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="format">Format :</label>
+                    <select id="format">
+                        <option>PDF</option>
+                        <option>Excel</option>
+                        <option>CSV</option>
+                    </select>
+                </div>
+                <div class="but"><button class="wly"><i class="fa-solid fa-filter butt"></i> Filtrer</button></div>
+            </section>
+            <section class="notifications-list">
+                <div class="notification-card black fade-in">
+                    <div class="avat-1"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="notification-body">
+                        <div class="notification-title">
+                            <p>Stock critique détecté</p>
+                            <p class="mint">Il y a 5 minutes</p>
+                        </div>
+                        <div class="notification-content">
+                            <p>Le produit "AirPods Pro 2" a atteint le seuil critique de stock (3 unités restantes).
+                                Veuillez passer commande rapidement</p>
+                            <div class="notification-actions">
+                                <button class="action-button primary">Passer commande</button>
+                                <button class="action-button secondary">Marquer comme lu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-card black fade-in">
+                    <div class="avat-2"><i class="fa-solid fa-exclamation"></i></div>
+                    <div class="notification-body">
+                        <div class="notification-title">
+                            <p>Nouvelle commande reçue</p>
+                            <p class="mint">Il y a 15 minutes</p>
+                        </div>
+                        <div class="notification-content">
+                            <p>Commande #CDM-2024-004 reçue de Marie Dubois pour un MacBook Pro 16"(€2.899.00)</p>
+                            <div class="notification-actions">
+                                <button class="action-button prima">Voir commande</button>
+                                <button class="action-button secondary">Marquer comme lu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-card black fade-in">
+                    <div class="avat-3"><i class="fa-solid fa-check"></i></div>
+                    <div class="notification-body">
+                        <div class="notification-title">
+                            <p>Commande expédiée</p>
+                            <p class="mint">Il y a 1 heures</p>
+                        </div>
+                        <div class="notification-content">
+                            <p>La commande #CDM-2024-003 a été expédiée avec succès. Numéro de suivi FR123456789</p>
+                            <div class="notification-actions">
+                                <button class="action-button primar">Suivre l'envoi</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification-card black fade-in">
+                    <div class="avat-4"><i class="fa-solid fa-gear"></i></div>
+                    <div class="notification-body">
+                        <div class="notification-title">
+                            <p>Sauvegarde automatique terminée</p>
+                            <p class="mint">Il y a 2 heures</p>
+                        </div>
+                        <div class="notification-content">
+                            <p>Sauvegarde quotudienne des données terminée avec succès 2?3 GB sauvegardées.</p>
+                            <div class="notification-actions">
+                                <button class="action-button primary">Sécurité le compte</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="notification-card black fade-in">
+                    <div class="avat-5"><i class="fa-solid fa-shield"></i></div>
+                    <div class="notification-body">
+                        <div class="notification-title">
+                            <p>Connexion depuis un nouvel appareil</p>
+                            <p class="mint">Il y a 3 heures</p>
+                        </div>
+                        <div class="notification-content">
+                            <p>Connexion détectée depuis un vouvel appareil (iPhone,Paris,France). Si ce n'est pas vous,
+                                changez votre mot de pas </p>
+                            <div class="notification-actions">
+                                <button class="action-button primary">Sécurité le compte</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="bulk-actions">
+                <div class="bulk-checkbox">
+                    <input type="checkbox" id="select-all">
+                    <label for="select-all">Sélectionner tout</label>
+                </div>
+                <div class="BB">
+                    <button class="bulk-button"><i class="fa-solid fa-check"></i> Marquer comme lu</button>
+                    <button class="bulk-button abdell"><i class="fa-solid fa-trash"></i> Supprimer</button>
+                </div>
+            </section>
+            <div id="abdel">
+                <input type="checkbox" id="toggle-profile">
+
+                <div class="profile-container">
+
+                    <div class="profile-header">
+                        <p><i class="fa-solid fa-user-circle icon-header"></i> Mon Profil</p>
+                        <a href="notifications.html" class="mark"><i class="fa-solid fa-xmark"></i></a>
+                    </div>
+
+                    <div class="profile-picture">
+                        <i class="fa-solid fa-user-circle icon-header"></i>
+                        <p>Changer la photo</p>
+                    </div>
+                    <div class="profile-content">
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label> Nom :</label>
+                                <input type="text" placeholder="Entrez votre nom" value="Administrateur">
+                            </div>
+                            <div class="field">
+                                <label> Prénom :</label>
+                                <input type="text" placeholder="Entrez votre prénom" value="Jean">
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label> Email :</label>
+                                <input type="email" placeholder="Ex : admin@dashboard.com" value="admin@dashboard.com">
+                            </div>
+                            <div class="field">
+                                <label> Téléphone :</label>
+                                <input type="tel" placeholder="Ex : +227 80 50 70 70" value="+33 6 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label> Rôle :</label>
+                            <input type="text" placeholder="Votre fonction dans le système" value="Gestionnaire">
+                        </div>
+
+                        <div class="field-group">
+                            <label> Dernière connexion :</label>
+                            <input type="text" value="15 Janvier 2024 à 14:30" disabled>
+                        </div>
+
+                        <div class="buttons">
+                            <button class="btn btn-close"> Fermer</button>
+                            <button class="btn btn-save"> Sauvegarder</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

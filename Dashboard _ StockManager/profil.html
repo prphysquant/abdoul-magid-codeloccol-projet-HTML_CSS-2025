@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- CHECKBOX CACHÉE -->
+    <input type="checkbox" id="toggle-profile">
+
+    <!-- CONTAINER PROFIL -->
+    <div class="profile-container">
+
+        <div class="profile-header">
+            <p><i class="fa-solid fa-user-circle icon-header"></i> Mon Profil</p>
+            <!-- CROIX QUI REDIRIGE -->
+            <a href="notifications.html" class="mark"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+
+        <div class="profile-picture">
+            <i class="fa-solid fa-user-circle icon-header"></i>
+            <p>Changer la photo</p>
+        </div>
+
+        <div class="profile-content">
+
+            <div class="field-row">
+                <div class="field">
+                    <label> Nom :</label>
+                    <input type="text" placeholder="Entrez votre nom" value="Administrateur">
+                </div>
+                <div class="field">
+                    <label> Prénom :</label>
+                    <input type="text" placeholder="Entrez votre prénom" value="Jean">
+                </div>
+            </div>
+
+            <div class="field-row">
+                <div class="field">
+                    <label> Email :</label>
+                    <input type="email" placeholder="Ex : admin@dashboard.com" value="admin@dashboard.com">
+                </div>
+                <div class="field">
+                    <label> Téléphone :</label>
+                    <input type="tel" placeholder="Ex : +227 80 50 70 70" value="+33 6 12 34 56 78">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label> Rôle :</label>
+                <input type="text" placeholder="Votre fonction dans le système" value="Gestionnaire">
+            </div>
+
+            <div class="field-group">
+                <label> Dernière connexion :</label>
+                <input type="text" value="15 Janvier 2024 à 14:30" disabled>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-close"> Fermer</button>
+                <button class="btn btn-save"> Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

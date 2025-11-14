@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - StockManager Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="accueil.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-section">
+            <div class="titre">
+                <h1>Connexion à <strong>StockManager</strong> Dashboard</h1>
+            </div>
+
+            <form action="dashboard.html" method="get">
+                <input type="text" name="username" placeholder="Nom d'utilisateur ou email" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Se souvenir de moi</label>
+                </div>
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+            <div class="links">
+                <p>Mot de passe oublié ? <a href="#">Réinitialiser</a></p>
+                <p>Vous n'avez pas de compte ? <a href="index.html">Inscrivez-vous</a></p>
+            </div>
+        </div>
+        <div class="welcome-section">
+            <div class="mgid">
+                <div class="circle"><span class="ms">SM</span></div>
+                <h3>Bienvenue dans <strong>StockManager</strong></h3>
+                <p class="yes">Gérez vos appareils électroniques, vos entrées et vos sorties de stock facilement avec
+                    une interface
+                    claire et rapide.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
