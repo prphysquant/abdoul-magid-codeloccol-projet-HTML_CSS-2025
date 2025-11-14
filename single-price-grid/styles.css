@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.card {
+    background-color: white;
+    max-width: 768px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.community {
+    padding: 40px;
+}
+
+.PP {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+
+}
+
+
+.main-content {
+    display: flex;
+}
+
+.Price {
+    background-color: #1eb8a8;
+    flex: 1;
+    padding: 40px;
+    color: white;
+}
+
+.Price h3 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.Price p {
+    margin-bottom: 20px;
+}
+
+.Price-détails {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.highlight {
+    font-size: 2rem;
+    color: white;
+}
+
+.Price-détails p {
+    font-size: 1rem;
+    color: white;
+}
+
+button {
+    background-color: hsl(71, 73%, 54%);
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b3df2f;
+}
+
+.Why-us {
+    background-color: #43d6c7;
+    flex: 1;
+    padding: 40px;
+    color: white;
+    font-size: 1rem;
+}
+
+.Why-us h3 {
+    margin-bottom: 20px;
+}
+
+.community h2 {
+    margin-bottom: 20px;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+}

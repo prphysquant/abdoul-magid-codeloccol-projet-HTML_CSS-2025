@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/commandes.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | StockManager</title>
+    
+    
+<link rel="stylesheet" href="./Dashboard _ StockManager_files/commandes.css"><link rel="stylesheet" href="./Dashboard _ StockManager_files/all.min.css"></head>
+
+<body cz-shortcut-listen="true">
+    <div class="dashboard">
+        <!-- Checkbox hack -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+
+        <aside class="sidebar">
+            <div class="logout-1">
+                <h2 class="logo">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </h2>
+                <hr>
+                <ul class="menu">
+                    <li><a href="http://127.0.0.1:5500/dashboard.html"><i class="fa-solid fa-gauge"></i><span>Tableau de bord</span></a></li>
+                    <li><a href="http://127.0.0.1:5500/analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+                    <li><a href="http://127.0.0.1:5500/commandes.html" class="active"><i class="fa-solid fa-cart-shopping"></i><span>Commandes</span></a></li>
+                    <li><a href="http://127.0.0.1:5500/parametres.html"><i class="fa-solid fa-gears"></i><span>Paramètres</span></a></li>
+                    <li><a href="http://127.0.0.1:5500/rapports.html"><i class="fa-solid fa-chart-bar"></i><span>Rapports</span></a></li>
+                    <li><a href="http://127.0.0.1:5500/notifications.html"><i class="fa-solid fa-bell"></i><span>Notifications</span></a></li>
+                </ul>
+
+            </div>
+
+            <div class="logout">
+                <div class="ad">
+                    <div class="user-card">
+                        <div class="user-image">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="user-info">
+                            <a href="http://127.0.0.1:5500/commandes.html#">Administrateur</a>
+                            <span class="user-infoi">Gestionnaire</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profil">
+                    <a href="http://127.0.0.1:5500/profil.html"><i class="fa-solid fa-circle-user"></i> Mon Profil</a>
+                </div>
+
+                <div class="logout-btn">
+                    <a href="http://127.0.0.1:5500/connexion.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Déconnexion</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <header>
+                <span class="titre">Gestion de Stock - Produits Électroniques</span>
+                <div class="user">
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-info-2">
+                        <i class="fa-solid fa-circle-user"></i> Administrateur
+                    </div>
+                </div>
+            </header>
+
+
+
+
+
+
+
+            <section class="content">
+                <div class="numbers">
+                    <h1><i class="fa-solid fa-cart-shopping"></i> Gestion des commandes</h1>
+                    <h3>Suivi et gestion complète des commandes clients</h3>
+                </div>
+
+                <!-- ==== STAT CARDS ==== -->
+                <section class="stats">
+                    <div class="card orange">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h2>23</h2>
+                            <p>En attente</p>
+                        </div>
+                    </div>
+
+                    <div class="card blue">
+                        <i class="fa-solid fa-gears"></i>
+                        <div>
+                            <h2>45</h2>
+                            <p>En cours</p>
+                        </div>
+                    </div>
+
+                    <div class="card purple">
+                        <i class="fa-solid fa-truck"></i>
+                        <div>
+                            <h2>67</h2>
+                            <p>Expédiées</p>
+                        </div>
+                    </div>
+
+                    <div class="card green">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h2>234</h2>
+                            <p>Livrées</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==== FILTER BAR ==== -->
+                <section class="filters">
+                    <label>
+                        Statut :
+                        <select>
+                            <option>Tous les statuts</option>
+                            <option>En attente</option>
+                            <option>En cours</option>
+                            <option>Expédiée</option>
+                            <option>Livrée</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Période :
+                        <select>
+                            <option>Aujourd'hui</option>
+                            <option>Cette semaine</option>
+                            <option>Ce mois</option>
+                        </select>
+                    </label>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Rechercher une commande...">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </section>
+
+                <!-- ==== ORDERS LIST ==== -->
+                <section class="orders">
+
+                    <!-- ===== COMMANDE 1 ===== -->
+
+
+                    <div class="order-card">
+                        <div class="order-cards">
+                            <div class="order-header">
+                                <h3>Commande #CMD-2024-001</h3>
+                                <div>
+                                    <p>Client : Jean Dupont</p>
+                                    <p>Date : 15 Jan 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="jean">
+                                <span class="status blue">En Attente</span>
+                                <span class="somme">€1,199.00</span>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div>
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <p><strong>iPhone 15 Pro </strong><span>128GB - Bleu</span></p>
+                            </div>
+                            <p class="qty">x1</p>
+                            <p class="price">€1,199.00</p>
+                        </div>
+
+                        <div class="order-footer">
+                            <div class="actions">
+                                <a href="http://127.0.0.1:5500/commandes.html#detail" class="btn blue"><i class="fa-solid fa-eye"></i> Voir détails</a>
+                                <a href="http://127.0.0.1:5500/commandes.html#modif" class="btn gray"><i class="fa-solid fa-pen-to-square"></i> Modifier</a>
+                                <button class="btn light-blue"><i class="fa-solid fa-check"></i> Traité</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="order-card">
+                        <div class="order-cards">
+                            <div class="order-header">
+                                <h3>Commande #CMD-2024-002</h3>
+                                <div>
+                                    <p>Client : Marie Martin</p>
+                                    <p>Date : 14 Jan 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="jean">
+                                <span class="status blue">En Cours</span>
+                                <span class="somme">€2,899.00</span>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div>
+                                <i class="fa-solid fa-laptop"></i>
+                                <p><strong>MacBook Pro 16"</strong> <span>M3 Pro - 512GB</span></p>
+                            </div>
+                            <p class="qty">x1</p>
+                            <p class="price">€2,899.00</p>
+                        </div>
+
+                        <div class="order-footer">
+                            <div class="actions">
+                                <a href="http://127.0.0.1:5500/commandes.html#detail" class="btn blue"><i class="fa-solid fa-eye"></i> Voir détails</a>
+                                <a href="http://127.0.0.1:5500/commandes.html#modif" class="btn gray"><i class="fa-solid fa-pen-to-square"></i> Modifier</a>
+                                <button class="btn bluer"><i class="fa-solid fa-truck"></i> Expédier</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="order-card">
+                        <div class="order-cards">
+                            <div class="order-header">
+                                <h3>Commande #CMD-2024-003</h3>
+                                <div>
+                                    <p>Client : Pierre Durand</p>
+                                    <p>Date : 13 Jan 2024</p>
+                                </div>
+                            </div>
+
+                            <div class="jean">
+                                <span class="status blue">Expédiée</span>
+                                <span class="somme">€558.00</span>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div>
+                                <i class="fa-solid fa-headphones"></i>
+                                <p>
+                                    <strong>AirPods Pro 2</strong> <span>USB-C</span>
+                                </p>
+                            </div>
+                            <p class="qty">x2</p>
+                            <p class="price">€558.00</p>
+                        </div>
+
+                        <div class="order-footer">
+                            <div class="actions">
+                                <a href="http://127.0.0.1:5500/commandes.html#detail" class="btn blue"><i class="fa-solid fa-eye"></i> Voir détails</a>
+                                <a href="http://127.0.0.1:5500/commandes.html#modif" class="btn exp"><i class="fa-solid fa-location-dot"></i>
+                                    Suivre</a>
+                                <button class="btn light-blue"><i class="fa-solid fa-circle-check"></i> Marqué
+                                    comme
+                                    Livrée</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+
+                <div id="detail" class="overlay">
+                    <div class="popup">
+                        <a href="http://127.0.0.1:5500/commandes.html#" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                        <iframe src="./Dashboard _ StockManager_files/detail.html"></iframe>
+                    </div>
+                </div>
+
+
+                <div id="modif" class="overlay">
+                    <div class="popup">
+                        <a href="http://127.0.0.1:5500/commandes.html#" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                        <iframe src="./Dashboard _ StockManager_files/modif.html"></iframe>
+                    </div>
+                </div>
+
+
+
+        </section></main>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</div></body></html>
